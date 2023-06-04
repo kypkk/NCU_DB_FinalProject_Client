@@ -1,7 +1,4 @@
-// TradingViewWidget.jsx
-
 import React, { useEffect, useRef } from "react";
-import ".././Styles/TradingView.css";
 
 let tvScriptLoadingPromise;
 
@@ -31,23 +28,31 @@ export default function TradingViewWidget() {
 
     function createWidget() {
       if (
-        document.getElementById("tradingview_509de") &&
+        document.getElementById("tradingview_6aab3") &&
         "TradingView" in window
       ) {
         new window.TradingView.widget({
-          width: 980,
-          height: 610,
-          symbol: "TWSE:2618",
+          width: 920,
+          height: 720,
+          symbol: "BINANCE:BTCUSDT",
           interval: "D",
           timezone: "Asia/Taipei",
-          theme: "dark",
+          theme: "light",
           style: "1",
           locale: "zh_TW",
           toolbar_bg: "#f1f3f6",
           enable_publishing: false,
           hide_side_toolbar: false,
           allow_symbol_change: true,
-          container_id: "tradingview_509de",
+          watchlist: [
+            "BINANCE:BTCUSDT",
+            "BINANCE:ETHUSDT",
+            "NASDAQ:META",
+            "NASDAQ:AAPL",
+            "NASDAQ:TSLA",
+            "NASDAQ:GOOG",
+          ],
+          container_id: "tradingview_6aab3",
         });
       }
     }
@@ -55,16 +60,7 @@ export default function TradingViewWidget() {
 
   return (
     <div className="tradingview-widget-container">
-      <div id="tradingview_509de" className=" mt-5" />
-      <div className="tradingview-widget-copyright">
-        <a
-          href="https://tw.tradingview.com/"
-          rel="noopener nofollow"
-          target="_blank"
-        >
-          <span className="blue-text">Track all markets on TradingView</span>
-        </a>
-      </div>
+      <div id="tradingview_6aab3" />
     </div>
   );
 }
