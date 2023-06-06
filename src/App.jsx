@@ -1,6 +1,14 @@
 import "./Styles/App.css";
-import Nav from "./Components/Nav.jsx";
-import { Trade, Home, Account, GBRule1, Aboutus } from "./Pages";
+import { Nav } from "./Components";
+import {
+  Trade,
+  Home,
+  Deposit,
+  GBRule1,
+  Aboutus,
+  Balance,
+  Strategy,
+} from "./Pages";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -10,8 +18,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Trade" element={<Trade />} />
-        <Route path="/Strategy/GBRule1" element={<GBRule1 />} />
-        <Route path="/Account/" element={<Account />} />
+        <Route path="/Strategy" element={<Strategy />} />
+        <Route path="/Deposit/" element={<Deposit />} />
+        <Route path="/Balance/" element={<Balance />} />
         <Route path="/About/" element={<Aboutus />} />
       </Routes>
     </main>

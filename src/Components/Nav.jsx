@@ -25,7 +25,7 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/Trade" className="flex items-center">
+        <a href="/Trade" className="flex items-center hover:text-yellow-900">
           Trade
         </a>
       </Typography>
@@ -35,7 +35,7 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/Strategy" className="flex items-center">
+        <a href="/Strategy" className="flex items-center hover:text-yellow-900">
           Strategy
         </a>
       </Typography>
@@ -45,8 +45,8 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/Account" className="flex items-center">
-          Account
+        <a href="/Deposit" className="flex items-center hover:text-yellow-900">
+          Deposit
         </a>
       </Typography>
       <Typography
@@ -55,7 +55,17 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/about" className="flex items-center">
+        <a href="/Balance" className="flex items-center hover:text-yellow-900">
+          Balance
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="/about" className="flex items-center hover:text-yellow-900">
           About us
         </a>
       </Typography>

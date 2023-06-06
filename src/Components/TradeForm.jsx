@@ -1,11 +1,5 @@
 import React, { useRef, useState } from "react";
-import {
-  Card,
-  Input,
-  Button,
-  Typography,
-  input,
-} from "@material-tailwind/react";
+import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import axios from "axios";
 
 const TradeForm = () => {

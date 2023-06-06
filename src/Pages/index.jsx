@@ -1,7 +1,9 @@
 import Home from "./Home.jsx";
 import Trade from "./Trade.jsx";
-import Account from "./Account.jsx";
+import Deposit from "./Deposit.jsx";
 import GBRule1 from "./Strategy/GBRule1.jsx";
 import Aboutus from "./About.jsx";
+import Balance from "./Balance.jsx";
+import Strategy from "./Strategy.jsx";
 
-export { Home, Trade, Account, GBRule1, Aboutus };
+export { Home, Trade, Deposit, GBRule1, Aboutus, Balance, Strategy };
