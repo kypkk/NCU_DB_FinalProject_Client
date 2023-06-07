@@ -25,10 +25,15 @@ const Balance = () => {
         .get("/Transaction")
         .then((res) => {
           let transactions = res.data.data;
-          transactions = transactions.slice(1);
+
           transactions?.forEach((element) => {
-            if (element.Buy_or_sell === 1) element.Buy_or_sell = "買";
-            else element.Buy_or_sell = "賣";
+            if (element.Buy_or_sell == 1) element.Buy_or_sell = "買";
+            else if (element.Buy_or_sell == -1) element.Buy_or_sell = "賣";
+            else element.Buy_or_sell = "";
+
+            element.Stock_price = parseFloat(element.Stock_price)
+              ? parseFloat(element.Stock_price).toFixed(2)
+              : "";
           });
           setTransaction(transactions);
         })

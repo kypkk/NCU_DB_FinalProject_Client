@@ -46,7 +46,6 @@ export default function TradingViewWidget() {
           allow_symbol_change: true,
           watchlist: [
             "BINANCE:BTCUSDT",
-            "BINANCE:ETHUSDT",
             "NASDAQ:META",
             "NASDAQ:AAPL",
             "NASDAQ:TSLA",

@@ -80,7 +80,7 @@ export default function Example() {
           href="/"
           className="mr-4 cursor-pointer py-1.5 font-medium"
         >
-          期末交易所
+          期末交易模擬系統
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button
@@ -89,7 +89,9 @@ export default function Example() {
           className="hidden lg:inline-block "
           color="yellow"
         >
-          <span className=" text-gray-700">Trade Now</span>
+          <a className=" text-gray-700" href="/Deposit">
+            Deposit
+          </a>
         </Button>
         <IconButton
           variant="text"
@@ -139,7 +141,9 @@ export default function Example() {
             className="mb-2"
             color="yellow"
           >
-            <span className=" text-gray-700">Trade Now</span>
+            <a className=" text-gray-700" href="/Deposit">
+              Deposit
+            </a>
           </Button>
         </div>
       </MobileNav>

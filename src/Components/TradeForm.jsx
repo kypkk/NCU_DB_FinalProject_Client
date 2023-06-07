@@ -5,7 +5,7 @@ import axios from "axios";
 const TradeForm = () => {
   const symbolRef = useRef();
   const shareRef = useRef();
-  const priceRef = useRef();
+
   const dateRef = useRef();
 
   let [hint, setHint] = useState("");
@@ -14,7 +14,7 @@ const TradeForm = () => {
     e.preventDefault();
     let symbol = symbolRef.current.value.toString();
     let shares = parseFloat(shareRef.current.value);
-    let price = parseFloat(priceRef.current.value);
+
     let date = dateRef.current.value;
 
     await axios
@@ -23,7 +23,6 @@ const TradeForm = () => {
         buy_or_sell: 1,
         stock_code: symbol,
         shares,
-        price,
       })
       .then((response) => {
         setHint(`買入成功`);
@@ -34,7 +33,7 @@ const TradeForm = () => {
 
     symbolRef.current.value = "";
     shareRef.current.value = "";
-    priceRef.current.value = "";
+
     dateRef.current.value = "";
   };
 
@@ -42,7 +41,7 @@ const TradeForm = () => {
     e.preventDefault();
     let symbol = symbolRef.current.value.toString();
     let shares = parseFloat(shareRef.current.value);
-    let price = parseFloat(priceRef.current.value);
+
     let date = dateRef.current.value;
 
     await axios
@@ -51,7 +50,6 @@ const TradeForm = () => {
         buy_or_sell: -1,
         stock_code: symbol,
         shares,
-        price,
       })
       .then((response) => {
         setHint("賣出成功");
@@ -62,7 +60,7 @@ const TradeForm = () => {
 
     symbolRef.current.value = "";
     shareRef.current.value = "";
-    priceRef.current.value = "";
+
     dateRef.current.value = "";
   };
 
@@ -83,7 +81,7 @@ const TradeForm = () => {
         <section className="mb-4 flex flex-col gap-6">
           <Input size="lg" label="交易標地物" inputRef={symbolRef} />
           <Input type="number" size="lg" label="數量" inputRef={shareRef} />
-          <Input type="number" size="lg" label="價格" inputRef={priceRef} />
+
           <Input type="date" size="lg" label="日期" inputRef={dateRef} />
         </section>
         <div className="flex mt-4 mx-4 justify-center">

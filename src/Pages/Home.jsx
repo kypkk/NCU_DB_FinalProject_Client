@@ -8,13 +8,12 @@ const Home = () => {
           {/* <img src="/" /> */}
         </div>
         <h1 className=" text-5xl md:mt-72 text-yellow-700 mb-4 font-bold">
-          期末交易所
+          交易模擬系統
         </h1>
         <p className=" ">
-          我們
-          <span className="text-yellow-700 font-extrabold text-xl">交易所</span>
+          讓<span className="text-yellow-700 font-extrabold text-xl">交易</span>
         </p>
-        <p className="">的slogen</p>
+        <p className="">更簡單</p>
         <div className="mt-2">
           <button
             type="submit"
@@ -26,7 +25,7 @@ const Home = () => {
             type="submit"
             className="my-4 mr-4 px-4 py-2 font-bold bg-yellow-700 rounded-lg text-white w-30 h-10"
           >
-            <a href="/FindStrategy">Find Strategy</a>
+            <a href="/strategy">Find Strategy</a>
           </button>
         </div>
       </section>
