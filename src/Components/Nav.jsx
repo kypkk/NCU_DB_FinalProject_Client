@@ -45,6 +45,16 @@ export default function Example() {
         color="blue-gray"
         className="p-1 font-normal"
       >
+        <a href="/Simulate" className="flex items-center hover:text-yellow-900">
+          Simulate
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
         <a href="/Deposit" className="flex items-center hover:text-yellow-900">
           Deposit
         </a>

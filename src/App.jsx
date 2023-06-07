@@ -8,6 +8,7 @@ import {
   Aboutus,
   Balance,
   Strategy,
+  Simulate,
 } from "./Pages";
 import { Routes, Route } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Trade" element={<Trade />} />
         <Route path="/Strategy" element={<Strategy />} />
+        <Route path="/Simulate" element={<Simulate />} />
         <Route path="/Deposit/" element={<Deposit />} />
         <Route path="/Balance/" element={<Balance />} />
         <Route path="/About/" element={<Aboutus />} />
