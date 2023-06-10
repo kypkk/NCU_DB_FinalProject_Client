@@ -26,8 +26,9 @@ const Strategy = () => {
       .then((response) => {
         stock = response.data.data;
         stock?.forEach((element) => {
-          if (element.Buy_or_sell === 1) element.Buy_or_sell = "買";
-          else element.Buy_or_sell = "賣";
+          if (element.Buy_or_sell == 1) element.Buy_or_sell = "買";
+          else if (element.Buy_or_sell == -1) element.Buy_or_sell = "賣";
+          else element.Buy_or_sell = "";
         });
         console.log(stock);
       })

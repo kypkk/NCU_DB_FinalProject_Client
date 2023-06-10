@@ -29,6 +29,11 @@ const Simulate = () => {
       })
       .then((res) => {
         simResult = res.data.data;
+        simResult?.forEach((element) => {
+          if (element.Buy_or_sell == 1) element.Buy_or_sell = "買";
+          else if (element.Buy_or_sell == -1) element.Buy_or_sell = "賣";
+          else element.Buy_or_sell = "";
+        });
       })
       .catch((err) => {
         setHint("模擬時系統發生錯誤");
@@ -36,7 +41,6 @@ const Simulate = () => {
     setSimResult(simResult);
   };
 
-  // todos
   return (
     <div className="flex justify-center">
       <section className=" flex justify-center mt-8">
@@ -69,7 +73,7 @@ const Simulate = () => {
               <Input size="lg" label="Date" type="date" inputRef={dateRef} />
             </section>
             <Button className="my-6 mx-4" color="yellow" onClick={simulate}>
-              Initial
+              Simulate
             </Button>
           </form>
         </Card>
